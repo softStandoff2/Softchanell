@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>Магазин подписок</h1>
-    <p>Выберите тарифный план и оформите подписку!</p>
+    <p>Выберите тарифный план и оплатите удобным способом!</p>
   </header>
 
   <main>
@@ -38,13 +38,7 @@
 
     <section class="contact">
       <h2>Написать мне</h2>
-      <form action="mailto:test166667@gmail.com" method="GET">
-        <label for="name">Имя:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="message">Сообщение:</label>
-        <textarea id="message" name="body" rows="4" required></textarea>
-        <button type="submit">Отправить письмо</button>
-      </form>
+      <a href="mailto:test166667@gmail.com?subject=Вопрос по подписке">Отправить письмо</a>
     </section>
   </main>
 
@@ -53,14 +47,14 @@
     <p><a href="https://t.me/chity_standoff_vip" target="_blank">Наш Telegram</a></p>
   </footer>
 
-  <!-- Модальное окно оплаты -->
+  <!-- Модальное окно -->
   <div id="paymentModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closePaymentModal()">&times;</span>
       <h2>Выберите способ оплаты</h2>
       <p id="selectedPlan"></p>
       <div class="payment-buttons">
-        <a href="http://t.me/send?start=IVZieqeXvzf6" target="_blank" class="button">Оплата в Telegram</a>
+        <a href="http://t.me/send?start=IVZieqeXvzf6" target="_blank" class="button">Оплата в Telegram (криптовалюта)</a>
         <a href="https://www.donationalerts.com/r/standoffcheats2" target="_blank" class="button">Оплата картой</a>
       </div>
     </div>
