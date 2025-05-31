@@ -2,32 +2,62 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Мой сайт</title>
-  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин подписок</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Добро пожаловать на мой сайт!</h1>
-    <nav>
-      <a href="#">Главная</a>
-      <a href="#">Обо мне</a>
-      <a href="#">Контакты</a>
-      <a href="https://t.me/chity_standoff_vip" target="_blank">Мой Телеграм</a>
-    </nav>
+    <h1>Магазин подписок</h1>
+    <p>Выберите тарифный план и получите доступ!</p>
   </header>
+
   <main>
-    <section>
-      <h2>Обо мне</h2>
-      <p>Привет! Я создаю свой сайт сам, без использования конструкторов. Здесь я делюсь своими проектами, играми и полезными фишками!</p>
-      <img src="myimage.jpg" alt="Моя картинка">
-      <div class="btn-container">
-        <a href="https://t.me/chity_standoff_vip" class="btn" target="_blank">Подписаться на Телеграм</a>
+    <section class="plans">
+      <div class="plan">
+        <h2>3 дня</h2>
+        <p>Тестовый доступ</p>
+        <button onclick="buyPlan('3 дня')">Купить</button>
+      </div>
+      <div class="plan">
+        <h2>7 дней</h2>
+        <p>Неделя доступа</p>
+        <button onclick="buyPlan('7 дней')">Купить</button>
+      </div>
+      <div class="plan">
+        <h2>15 дней</h2>
+        <p>Полмесяца доступа</p>
+        <button onclick="buyPlan('15 дней')">Купить</button>
+      </div>
+      <div class="plan">
+        <h2>30 дней</h2>
+        <p>Полный месяц доступа</p>
+        <button onclick="buyPlan('30 дней')">Купить</button>
       </div>
     </section>
+
+    <section class="contact">
+      <h2>Написать мне</h2>
+      <form action="mailto:your@email.com" method="post" enctype="text/plain">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="message">Сообщение:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit">Отправить письмо</button>
+      </form>
+    </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 Мой сайт. Все права защищены. | <a href="https://t.me/chity_standoff_vip" target="_blank">Телеграм</a></p>
+    <p>© 2025 Магазин подписок. Все права защищены.</p>
+    <p><a href="https://t.me/chity_standoff_vip" target="_blank">Наш Telegram</a></p>
   </footer>
+
+  <script>
+    function buyPlan(planName) {
+      alert("Вы выбрали подписку на " + planName + ". Для покупки напишите мне в Telegram.");
+      window.open("https://t.me/chity_standoff_vip", "_blank");
+    }
+  </script>
 </body>
 </html>
