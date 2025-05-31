@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оплата подписки</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    window.onload = function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const plan = urlParams.get('plan') || 'не выбран';
+      document.getElementById('selectedPlan').innerText = 'Вы выбрали: ' + plan;
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Оплата подписки</h1>
+  </header>
+
+  <main>
+    <p id="selectedPlan" class="selected-plan"></p>
+    <div class="payment-options">
+      <a href="http://t.me/send?start=IVZieqeXvzf6" target="_blank" class="payment-button">
+        Оплата в Telegram (криптовалюта)
+      </a>
+      <a href="https://www.donationalerts.com/r/standoffcheats2" target="_blank" class="payment-button">
+        Оплата картой
+      </a>
+    </div>
+    <a href="index.html" class="back-button">Назад</a>
+  </main>
+
+  <footer>
+    <p>© 2025 Магазин подписок. Все права защищены.</p>
+    <p><a href="https://t.me/chity_standoff_vip" target="_blank">Наш Telegram</a></p>
+  </footer>
+</body>
+</html>
