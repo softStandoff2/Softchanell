@@ -17,28 +17,28 @@
       <div class="plan">
         <h2>3 дня</h2>
         <p>Тестовый доступ</p>
-        <button onclick="openPaymentModal('3 дня')">Купить</button>
+        <a href="payment.html?plan=3%20дня" class="buy-button">Купить</a>
       </div>
       <div class="plan">
         <h2>7 дней</h2>
         <p>Неделя доступа</p>
-        <button onclick="openPaymentModal('7 дней')">Купить</button>
+        <a href="payment.html?plan=7%20дней" class="buy-button">Купить</a>
       </div>
       <div class="plan">
         <h2>15 дней</h2>
         <p>Полмесяца доступа</p>
-        <button onclick="openPaymentModal('15 дней')">Купить</button>
+        <a href="payment.html?plan=15%20дней" class="buy-button">Купить</a>
       </div>
       <div class="plan">
         <h2>30 дней</h2>
         <p>Полный месяц доступа</p>
-        <button onclick="openPaymentModal('30 дней')">Купить</button>
+        <a href="payment.html?plan=30%20дней" class="buy-button">Купить</a>
       </div>
     </section>
 
     <section class="contact">
       <h2>Написать мне</h2>
-      <a href="mailto:test166667@gmail.com?subject=Вопрос по подписке">Отправить письмо</a>
+      <a href="mailto:test166667@gmail.com?subject=Вопрос по подписке" class="contact-button">Отправить письмо</a>
     </section>
   </main>
 
@@ -46,40 +46,5 @@
     <p>© 2025 Магазин подписок. Все права защищены.</p>
     <p><a href="https://t.me/chity_standoff_vip" target="_blank">Наш Telegram</a></p>
   </footer>
-
-  <!-- Модальное окно -->
-  <div id="paymentModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closePaymentModal()">&times;</span>
-      <h2>Выберите способ оплаты</h2>
-      <p id="selectedPlan"></p>
-      <div class="payment-options">
-        <button onclick="window.open('http://t.me/send?start=IVZieqeXvzf6', '_blank')">
-          Оплата в Telegram (криптовалюта)
-        </button>
-        <button onclick="window.open('https://www.donationalerts.com/r/standoffcheats2', '_blank')">
-          Оплата картой
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function openPaymentModal(planName) {
-      document.getElementById('paymentModal').style.display = 'flex';
-      document.getElementById('selectedPlan').innerText = "Вы выбрали: " + planName;
-    }
-
-    function closePaymentModal() {
-      document.getElementById('paymentModal').style.display = 'none';
-    }
-
-    window.onclick = function(event) {
-      const modal = document.getElementById('paymentModal');
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
-    }
-  </script>
 </body>
 </html>
