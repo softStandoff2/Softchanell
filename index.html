@@ -53,16 +53,20 @@
       <span class="close" onclick="closePaymentModal()">&times;</span>
       <h2>Выберите способ оплаты</h2>
       <p id="selectedPlan"></p>
-      <div class="payment-buttons">
-        <a href="http://t.me/send?start=IVZieqeXvzf6" target="_blank" class="button">Оплата в Telegram (криптовалюта)</a>
-        <a href="https://www.donationalerts.com/r/standoffcheats2" target="_blank" class="button">Оплата картой</a>
+      <div class="payment-options">
+        <button onclick="window.open('http://t.me/send?start=IVZieqeXvzf6', '_blank')">
+          Оплата в Telegram (криптовалюта)
+        </button>
+        <button onclick="window.open('https://www.donationalerts.com/r/standoffcheats2', '_blank')">
+          Оплата картой
+        </button>
       </div>
     </div>
   </div>
 
   <script>
     function openPaymentModal(planName) {
-      document.getElementById('paymentModal').style.display = 'block';
+      document.getElementById('paymentModal').style.display = 'flex';
       document.getElementById('selectedPlan').innerText = "Вы выбрали: " + planName;
     }
 
@@ -72,8 +76,8 @@
 
     window.onclick = function(event) {
       const modal = document.getElementById('paymentModal');
-      if (event.target == modal) {
-        modal.style.display = "none";
+      if (event.target === modal) {
+        modal.style.display = 'none';
       }
     }
   </script>
