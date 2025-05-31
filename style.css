@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to right, #4facfe, #00f2fe);
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ body {
 
 header {
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 h1 {
@@ -32,13 +32,18 @@ main {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 20px;
   border-radius: 10px;
-  width: 200px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  width: 220px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+.plan:hover {
+  transform: scale(1.05);
 }
 
 .plan h2 {
   font-size: 1.5em;
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
 }
 
 button {
@@ -49,6 +54,7 @@ button {
   border-radius: 20px;
   cursor: pointer;
   font-size: 1em;
+  transition: background-color 0.3s;
 }
 
 button:hover {
@@ -79,4 +85,58 @@ footer {
 footer a {
   color: #fff;
   text-decoration: underline;
+}
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #222;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+.payment-buttons {
+  margin-top: 20px;
+}
+
+.payment-buttons .button {
+  display: block;
+  background-color: #4facfe;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 20px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.payment-buttons .button:hover {
+  background-color: #00c6ff;
 }
