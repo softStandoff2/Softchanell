@@ -68,12 +68,19 @@ button:hover {
   border-radius: 10px;
 }
 
-input, textarea {
-  width: 80%;
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
+.contact a {
+  display: inline-block;
+  background-color: #fff;
+  color: #4facfe;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.contact a:hover {
+  background-color: #ddd;
 }
 
 footer {
